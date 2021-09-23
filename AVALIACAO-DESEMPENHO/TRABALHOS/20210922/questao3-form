@@ -1,0 +1,5 @@
+Métricas para um servidor web:
+
+Quantidade de requisições suportadas ao mesmo tempo
+Velocidade de leitura/escrita das requisições em quantidades determinadas
+Velocidade do link de subrede (Vazão)

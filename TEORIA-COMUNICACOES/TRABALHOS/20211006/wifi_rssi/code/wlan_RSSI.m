@@ -32,7 +32,7 @@ function out = wlan_RSSI(so, ta, N, dev)
     
   else
     
-    printf('SO não disponível');
+    printf('SO nao disponivel');
     
   endif
     

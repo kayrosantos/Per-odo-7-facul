@@ -1,0 +1,51 @@
+System:
+  Host: ubuntussd Kernel: 5.11.0-37-generic x86_64 bits: 64 
+  Desktop: GNOME 3.38.4 Distro: Ubuntu 21.04 (Hirsute Hippo) 
+Machine:
+  Type: Laptop System: Hewlett-Packard product: HP 240 G2 Notebook PC 
+  v: 0970100000405E10000634181 serial: <superuser required> 
+  Mobo: Hewlett-Packard model: 218B v: 39.15 serial: <superuser required> 
+  UEFI: Insyde v: F.11 date: 03/21/2014 
+Battery:
+  ID-1: BAT0 charge: 9.2 Wh condition: 23.1/23.1 Wh (100%) 
+CPU:
+  Info: Dual Core model: Intel Core i5-3230M bits: 64 type: MT MCP 
+  L2 cache: 3 MiB 
+  Speed: 2885 MHz min/max: 1200/3200 MHz Core speeds (MHz): 1: 2885 2: 3103 
+  3: 2880 4: 2864 
+Graphics:
+  Device-1: Intel 3rd Gen Core processor Graphics driver: i915 v: kernel 
+  Device-2: Realtek HP Truevision HD integrated webcam type: USB 
+  driver: uvcvideo 
+  Display: x11 server: X.Org 1.20.11 driver: loaded: modesetting 
+  unloaded: fbdev,vesa resolution: 1366x768~60Hz 
+  OpenGL: renderer: Mesa DRI Intel HD Graphics 4000 (IVB GT2) 
+  v: 4.2 Mesa 21.0.3 
+Audio:
+  Device-1: Intel 7 Series/C216 Family High Definition Audio 
+  driver: snd_hda_intel 
+  Sound Server: ALSA v: k5.11.0-37-generic 
+Network:
+  Device-1: Realtek RTL810xE PCI Express Fast Ethernet driver: r8169 
+  IF: eno1 state: down mac: 8c:dc:d4:9f:97:30 
+  Device-2: Ralink RT3290 Wireless 802.11n 1T/1R PCIe driver: rt2800pci 
+  IF: wlo1 state: up mac: 90:48:9a:f0:20:cd 
+Bluetooth:
+  Device-1: Ralink RT3290 Bluetooth driver: N/A 
+Drives:
+  Local Storage: total: 689.33 GiB used: 33.52 GiB (4.9%) 
+  ID-1: /dev/sda vendor: Crucial model: CT240BX500SSD1 size: 223.57 GiB 
+  ID-2: /dev/sdb vendor: Seagate model: ST500LM012 HN-M500MBB 
+  size: 465.76 GiB 
+Partition:
+  ID-1: / size: 109.18 GiB used: 33.47 GiB (30.7%) fs: ext4 dev: /dev/sda4 
+  ID-2: /boot/efi size: 511 MiB used: 48 MiB (9.4%) fs: vfat dev: /dev/sdb1 
+Swap:
+  ID-1: swap-1 type: partition size: 3.72 GiB used: 0 KiB (0.0%) 
+  dev: /dev/sda3 
+Sensors:
+  System Temperatures: cpu: 61.0 C mobo: N/A 
+  Fan Speeds (RPM): N/A 
+Info:
+  Processes: 295 Uptime: 2m Memory: 7.66 GiB used: 3.04 GiB (39.7%) 
+  Shell: Bash inxi: 3.3.01 

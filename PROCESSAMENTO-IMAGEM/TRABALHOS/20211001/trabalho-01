@@ -1,3 +1,34 @@
 Grupo:
     Gabriel Machado
     Iago Costa
+
+
+Trabalho Processamento de Imagens
+https://scikit-image.org/docs/stable/auto_examples/
+
+5 técnicas de galerias diferentes:
+
+Edges and lines
+https://scikit-image.org/docs/stable/auto_examples/edges/plot_skeleton.html#sphx-glr-auto-examples-edges-plot-skeleton-py
+
+Manipulating exposure and color channels
+https://scikit-image.org/docs/stable/auto_examples/color_exposure/plot_rgb_to_hsv.html#sphx-glr-auto-examples-color-exposure-plot-rgb-to-hsv-py
+
+Geometrical transformations and registration
+https://scikit-image.org/docs/stable/auto_examples/transform/plot_pyramid.html#sphx-glr-auto-examples-transform-plot-pyramid-py
+
+Image registration  
+https://scikit-image.org/docs/stable/auto_examples/registration/plot_opticalflow.html#sphx-glr-auto-examples-registration-plot-opticalflow-py
+
+Filtering and restoration
+https://scikit-image.org/docs/stable/auto_examples/filters/plot_nonlocal_means.html#sphx-glr-auto-examples-filters-plot-nonlocal-means-py
+
+
+Trabalho Visão Computacional
+
+Artigo 01
+https://www.pyimagesearch.com/2017/09/18/real-time-object-detection-with-deep-learning-and-opencv/
+
+Artigo 02
+https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning/
+

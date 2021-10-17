@@ -1,0 +1,2 @@
+Geometrical transformations and registration
+https://scikit-image.org/docs/stable/auto_examples/transform/plot_pyramid.html#sphx-glr-auto-examples-transform-plot-pyramid-py

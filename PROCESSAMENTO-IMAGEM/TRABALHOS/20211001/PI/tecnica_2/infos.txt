@@ -1,0 +1,2 @@
+Manipulating exposure and color channels
+https://scikit-image.org/docs/stable/auto_examples/color_exposure/plot_rgb_to_hsv.html#sphx-glr-auto-examples-color-exposure-plot-rgb-to-hsv-py

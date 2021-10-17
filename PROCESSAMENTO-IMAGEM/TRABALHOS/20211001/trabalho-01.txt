@@ -32,3 +32,11 @@ https://www.pyimagesearch.com/2017/09/18/real-time-object-detection-with-deep-le
 Artigo 02
 https://www.pyimagesearch.com/2018/09/03/semantic-segmentation-with-opencv-and-deep-learning/
 
+#
+# To activate this environment, use
+#
+#     $ conda activate processamento-imagem-facul
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate

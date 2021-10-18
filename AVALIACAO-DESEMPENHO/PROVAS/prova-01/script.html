@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import boostrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Trabalho</title>
+</head>
+
+<body>
+    <center>
+        <h2>Trabalho de avaliação e desempenho</h2>
+        <label for="n1">Tamanho da fila: </label>
+        <!-- <br> -->
+        <input type="text" name="n1" id="n1">
+        <!-- <br> -->
+        <!-- <br> -->
+        <button onclick="calcular()">Calcular</button>
+        <br>
+        <br>
+        <label for="n2">Resultado: </label>
+        <br>
+        <textarea name="n2" id="n2" cols="75" rows="22"></textarea>
+        <br>
+    </center>
+</body>
+<script>
+
+    function calcularFatorialRecursivamente(n) {
+        if (n === 1) {
+            return 1;
+        }
+
+        return n * calcularFatorialRecursivamente(n - 1);
+    }
+
+    function calcularFatorial(fatorial) {
+        if (isNaN(fatorial)) {
+            return 'Não existe fatorial de um texto';
+        }
+
+        if (!Number.isInteger(fatorial) || fatorial < 0) {
+            return 'Não existe fatorial de um número não natural';
+        }
+
+        if (fatorial === 0 || fatorial === 1) {
+            return 1;
+        }
+
+        return calcularFatorialRecursivamente(fatorial);
+    }
+
+    // console.log(calcularFatorial(5));
+    // Exemplo para vários atendentes e fila única
+    // lambda - chegada de clientes por tempo (no caso hora)
+    // mi - processamento por tempo (no caso hora)
+    // M - numero de atendentes
+    // Po - probabilidade de que o sistema esteja livre
+    // L - média de clientes no sistema
+    // Lq - média de clientes na fila
+    // W - tempo médio que o cliente permanece no sistema
+    // Wq - tempo médio que o cliente permanece na fila
+    // Pw - Probabilidade que todos os servidores estejam ocupados
+
+    lambda = 500
+    mi = 15
+    M = 5
+
+    function pzero(lambda, mi, M) {
+        var somatorio = 0
+        for (let index = 0; index < M + 1; index++) {
+            somatorio = somatorio + ((1 / calcularFatorial(index)) * (Math.pow((lambda / mi), index)));
+            // console.log(index);
+        }
+        var restante = (M * mi) / ((M * mi) - lambda);
+        var result = (1 / (somatorio - restante));
+        return result;
+    }
+
+    function L(pzero, lambda, mi, M) {
+        var parte_cima = lambda * mi * Math.pow((lambda / mi), M);
+        var parte_baixo = calcularFatorial((M - 1)) * Math.pow(((M * mi) - lambda), 2);
+        var divisao = parte_cima / parte_baixo;
+        var primeiro_lado = divisao * pzero;
+        var segundo_lado = lambda / mi;
+        var result = primeiro_lado + segundo_lado;
+        return result;
+    }
+
+    function Lq(L, lambda, mi) {
+        var result = L - (lambda / mi);
+        return result;
+    }
+
+    function W(L, lambda) {
+        var result = L / lambda;
+        return result;
+    }
+
+    function Wq(W, lambda) {
+        var result = W - (1 / lambda);
+        return result;
+    }
+
+    function Pw(M, lambda, mi, pzero) {
+        var result = 1 / calcularFatorial(M) * Math.pow((lambda / mi), M) * ((M * mi) / ((M * mi) - lambda)) * pzero;
+        return result;
+    }
+
+
+
+    function calcular() {
+
+        var n1 = document.getElementById('n1').value;
+        document.getElementById('n2').append('Supondo que o tamanho da fila é o total que chega no dia todo.' + '\n');
+        lambda = parseInt(n1 / 24);
+        document.getElementById('n2').append('Para uma fila de tamanho: ' + n1.toString().replace('.', ',') + '\n');
+
+        var pzero_result = pzero(lambda, mi, M)
+        console.log('pzero: '+pzero_result)
+
+        var L_result = L(pzero_result, lambda, mi, M);
+        console.log('L: '+L_result);
+
+        var Lq_result = Lq(L_result, lambda, mi);
+        console.log('Lq: '+Lq_result);
+
+        var W_result = W(L_result, lambda);
+        console.log('W: '+W_result);
+
+        var Wq_result = Wq(W_result, lambda);
+        console.log('Wq: '+Wq_result);
+
+        var Pw_result = Pw(M, lambda, mi, pzero_result)
+        console.log('Pw: '+Pw_result)
+
+        document.getElementById('n2').append('Valor de lambda chegada de clientes por tempo (no caso hora): ' + lambda.toString().replace('.', ',') + ' clientes que chegam por hora.\n');
+        document.getElementById('n2').append('Valor de mi (processamento por tempo (no caso hora)): ' + mi.toString().replace('.', ',') + ' clientes atendidos por hora.\n');
+        document.getElementById('n2').append('Valor de M (numero de atendentes): ' + M.toString().replace('.', ',') + ' atendentes.\n');
+
+        document.getElementById('n2').append('Valor de Po (probabilidade de que o sistema esteja livre): ' + (pzero_result * 100).toPrecision(5).toString().replace('.', ',') + '%.\n');
+        document.getElementById('n2').append('Valor de L (média de clientes no sistema): ' + L_result.toPrecision(5).toString().replace('.', ',') + ' clientes.\n');
+        document.getElementById('n2').append('Valor de Lq (média de clientes na fila): ' + Lq_result.toPrecision(5).toString().replace('.', ',') + ' clientes.\n');
+        document.getElementById('n2').append('Valor de W (tempo médio que o cliente permanece no sistema): ' + (W_result * 60).toPrecision(5).toString().replace('.', ',') + ' minutos.\n');
+        document.getElementById('n2').append('Valor de Wq (tempo médio que o cliente permanece na fila): ' + (Wq_result * 60).toPrecision(5).toString().replace('.', ',') + ' minutos.\n');
+        document.getElementById('n2').append('Valor de Pw (Probabilidade que todos os servidores estejam ocupados): ' + (Pw_result * 100).toPrecision(5).toString().replace('.', ',') + '%.\n\n');
+
+        // document.getElementById("n2").value = "";
+
+        var limite_funcionario_atendimento_dia = 360;
+
+        document.getElementById('n2').append('O tempo de espera do último usuário é: ' + (parseFloat(n1) * parseFloat(Wq_result)).toPrecision(5).toString().replace('.', ',') + ' minutos ou ' + ((parseFloat(n1) * parseFloat(Wq_result)) / 60).toPrecision(5).toString().replace('.', ',') + ' horas.' + '\n');
+
+        if (n1 > 1800) {
+            contador = 0;
+            while (n1 > limite_funcionario_atendimento_dia) {
+                limite_funcionario_atendimento_dia = limite_funcionario_atendimento_dia + 360;
+                contador++;
+            }
+            document.getElementById('n2').append('Vai precisar de mais ' + contador.toString().replace('.', ',') + ' funcionários, \n');
+            document.getElementById('n2').append('ou cada funcionário terá que atender ' + (n1 / 24 / 5).toPrecision(5).toString().replace('.', ',') + ' pessoas por dia. \n\n');
+        }
+        if (n1 <= 1800) {
+            document.getElementById('n2').append('Não precisa de mais funcionários. \n');
+            document.getElementById('n2').append('Não precisa que os funcionários atendam mais pessoas. \n\n');
+
+        }
+        document.getElementById('n2').append('==========================================================================\n\n');
+
+    }
+
+</script>
+<!-- import script bootstrap 5 jquery e outros-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>

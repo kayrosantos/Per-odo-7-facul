@@ -18,8 +18,17 @@
         <label for="n1">Tamanho da fila: </label>
         <!-- <br> -->
         <input type="text" name="n1" id="n1">
+        <br>
         <!-- <br> -->
+        <label for="n2">Valor de mi (atendimentos/h): </label>
         <!-- <br> -->
+        <input type="text" name="n2" id="n2">
+        <br>
+        <label for="n3">Valor de M (atendentes): </label>
+        <!-- <br> -->
+        <input type="text" name="n3" id="n3">
+        <!-- <br> -->
+        <br>
         <button onclick="calcular()">Calcular</button>
         <br>
         <br>
@@ -78,7 +87,7 @@
             // console.log(index);
         }
         var restante = (M * mi) / ((M * mi) - lambda);
-        var result = (1 / (somatorio - restante));
+        var result = (1 / (somatorio * restante));
         return result;
     }
 

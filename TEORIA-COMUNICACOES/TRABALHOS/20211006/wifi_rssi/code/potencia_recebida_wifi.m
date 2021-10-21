@@ -15,7 +15,7 @@ function runSim()
   % Condiguração de Variáveis
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   printf('Início de execução \n');
-  output_file = 'fundos.csv';
+  output_file = 'quarto1-2.csv';
   wifi_power = wlan_RSSI('Ubuntu', 0.5, 120, 'wlo1');
   csvwrite(output_file, wifi_power);
   printf('Fim de execução \n');

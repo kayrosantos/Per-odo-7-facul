@@ -1,0 +1,15 @@
+Cada equipe deve pesquisar sofwtares online ou offline que desenham ou produzem Automâtos. 
+As equipes devem realizar uma apresentação em .ppt ou slides na dia determinado na tarefa 
+no horário da aula (dia 04 de novembro). As apresentações devem mostrar o funcionamento 
+do software, a criação/desenho de uma AFD, a criação/desenho de uma AFN e a transfromação 
+de um AFN em AFD (se o programa tiver essa funcionalidade). As equipes devem pesquisar 
+softwares distintos (se possível) e apresentar exemplos (de AFD e AFN) distintos das 
+demais equipes. A atividade valerá 3,0 pontos para a 1ª Avaliação.
+
+
+
+Com isso, fechamos a 1ª Avaliação = 
+Trabalho 01 (1,0 pt) 
++ Trabalho 02 (2,0 pts) 
++ Prova Objetiva (4,0 pts) 
++ Trabalho 03 (3,0 pts)

@@ -13,3 +13,9 @@ Trabalho 01 (1,0 pt)
 + Trabalho 02 (2,0 pts) 
 + Prova Objetiva (4,0 pts) 
 + Trabalho 03 (3,0 pts)
+
+
+
+http://www.evoluma.com/auger/manual/algoritmos.html
+http://www.zanuz.com/2007/09/convertendo-afnd-para-afd.html
+https://github.com/RafaelDupuy/Automato

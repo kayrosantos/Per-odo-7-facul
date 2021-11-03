@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AutomatoAFNDparaAFD">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/AutomatoAFNDparaAFD.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
